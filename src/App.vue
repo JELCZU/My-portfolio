@@ -1,15 +1,13 @@
-<template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Welcome to Your Vue.js App" />
-</template>
+<template><PortfolioNavigation /></template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
+// import HelloWorld from "./components/HelloWorld.vue";
+import PortfolioNavigation from "./components/PortfolioNavigation.vue";
 
 export default {
   name: "App",
   components: {
-    HelloWorld,
+    PortfolioNavigation,
   },
 };
 </script>
