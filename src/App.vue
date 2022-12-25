@@ -26,10 +26,37 @@ export default {
 * {
   box-sizing: border-box;
   /* font-family: SF Pro Display, Helvetica, Arial, sans-serif; */
+  font-family: Open Sans, sans-serif;
+}
+:root {
+  --dark-color: #181818;
+  --darker-color: #1f1f1f;
+  --lighter-color: #252525;
+  --light-color: #3c3c3c;
+  background-color: var(--light-color);
 }
 body {
   padding: 0;
   margin: 0;
+}
+.container {
+  padding: 40px 20px;
+}
+h1,
+h2,
+h3,
+h4,
+li {
+  color: #ffffff;
+}
+h1 {
+  font-size: 32px;
+}
+h2 {
+  font-size: 26px;
+}
+h3 {
+  font-size: 22px;
 }
 .navigation {
   position: sticky;

@@ -16,9 +16,6 @@ export default {
     PortfolioProjects,
     ContactMe,
   },
-  // props: {
-  //   msg: String,
-  // },
 };
 </script>
 
