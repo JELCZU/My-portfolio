@@ -11,15 +11,25 @@
           <a href="mailto:kamilj12@gmail.com">kamilj12@gmail.com</a>
         </h3>
       </div>
-      <form action="https://formsubmit.co/kamilj12@gmail.com" method="POST">
+      <form
+        action="https://formsubmit.io/send/kamilj12@gmail.com"
+        method="POST"
+      >
         <label for="mail"><h3>Your e-mail</h3></label
-        ><input id="mail" name="mail" type="mail" placeholder="e-mail" />
+        ><input
+          id="mail"
+          name="mail"
+          type="mail"
+          placeholder="e-mail"
+          required
+        />
         <label for="msg"><h3>Enter your message</h3></label
         ><textarea
           id="mail"
           name="msg"
           rows="5"
           placeholder="Enter your message here"
+          required
         ></textarea>
         <button type="submit">Send</button>
       </form>
