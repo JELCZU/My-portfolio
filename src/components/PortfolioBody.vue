@@ -19,4 +19,8 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+#start {
+  height: 100vh;
+}
+</style>

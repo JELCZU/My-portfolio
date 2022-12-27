@@ -45,9 +45,7 @@ button {
 .container {
   padding: 50px 20px;
 }
-.navigation {
-  height: min-content;
-}
+
 h1,
 h2,
 h3,
@@ -65,9 +63,11 @@ h3 {
   font-size: 18px;
 }
 .navigation {
-  position: sticky;
+  height: min-content;
+  position: fixed;
   width: 100%;
   top: 0;
+  z-index: 2;
 }
 .linkedin-github-container {
   display: flex;
