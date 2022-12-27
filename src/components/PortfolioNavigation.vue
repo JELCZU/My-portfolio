@@ -17,7 +17,6 @@
         />
       </button>
     </div>
-    <!-- <a href="#">asd<img class="logo" alt="Kamil Jarczak logo" /> </a> -->
     <HamburgerMenu
       :displayMenu="displayMenu"
       :menuElements="this.menuElements"
