@@ -5,9 +5,11 @@
     @mouseleave="currentImage = this.portfolioProject.img"
   >
     <a :href="this.portfolioProject.link"
-      ><img :src="require(`@/assets/img/${currentImage}`)"
+      ><img loading="lazy" :src="require(`@/assets/img/${currentImage}`)"
     /></a>
-    <h2>{{ this.portfolioProject.name }}</h2>
+    <a :href="this.portfolioProject.link">
+      <h2>{{ this.portfolioProject.name }}</h2></a
+    >
   </div>
 </template>
 
@@ -24,6 +26,9 @@ export default {
 </script>
 
 <style scoped>
+a {
+  text-decoration: none;
+}
 h2 {
   margin: 10px;
 }

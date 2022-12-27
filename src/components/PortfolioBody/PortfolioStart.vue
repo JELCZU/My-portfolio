@@ -3,7 +3,7 @@
     <h1>Hi,<br />it's Kamil Jarczak</h1>
 
     <h2>
-      I'm web developer.<br />Contact me and let's make something special
+      I'm a web developer.<br />Contact me and let's make some great work
       together.
     </h2>
 
@@ -34,15 +34,14 @@ export default {
   color: #ffffff;
   background-color: var(--light-color);
 }
-.container {
-  padding: 80px 20px;
-}
+
 h1 {
   text-align: center;
   margin: 30px 0 10px 0;
 }
 h2 {
   text-align: center;
+  padding: 20px 0px;
 }
 .font-awesome-icon {
   font-size: 46px;

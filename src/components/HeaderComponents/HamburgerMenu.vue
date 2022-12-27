@@ -37,7 +37,8 @@ export default {
 
 <style scoped>
 .navigation {
-  position: relative;
+  position: absolute;
+  margin-top: 50px;
   transform: translateY(-100%);
   width: 100%;
   background-color: var(--darker-color);

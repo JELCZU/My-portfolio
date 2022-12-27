@@ -39,12 +39,15 @@ body {
   padding: 0;
   margin: 0;
 }
+button {
+  cursor: pointer;
+}
 .container {
-  /* padding: 50px 20px;
-  margin: -10px 0; */
   padding: 50px 20px;
 }
-
+.navigation {
+  height: min-content;
+}
 h1,
 h2,
 h3,
@@ -62,7 +65,7 @@ h3 {
   font-size: 18px;
 }
 .navigation {
-  position: fixed;
+  position: sticky;
   width: 100%;
   top: 0;
 }
