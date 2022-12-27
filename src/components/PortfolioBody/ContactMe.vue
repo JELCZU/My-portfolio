@@ -7,15 +7,15 @@
           class="font-awesome-icon"
           icon="fa-solid fa-envelope"
         />
-        <h3>
+        <h2>
           <a href="mailto:kamilj12@gmail.com">kamilj12@gmail.com</a>
-        </h3>
+        </h2>
       </div>
       <form
         action="https://formsubmit.io/send/kamilj12@gmail.com"
         method="POST"
       >
-        <label for="mail"><h3>Your e-mail</h3></label
+        <label for="mail"><h2>Your e-mail</h2></label
         ><input
           id="mail"
           name="mail"
@@ -23,7 +23,7 @@
           placeholder="e-mail"
           required
         />
-        <label for="msg"><h3>Enter your message</h3></label
+        <label for="msg"><h2>Enter your message</h2></label
         ><textarea
           id="mail"
           name="msg"
@@ -67,7 +67,6 @@ button {
   background-color: #777777;
   font-weight: bold;
   margin-top: 10px;
-  /* background-color: var(--darker-color); */
 }
 .contant-forms {
   /* align-items: center; */
@@ -77,7 +76,6 @@ button {
   width: 100%;
 }
 .container {
-  /* height: 800px; */
   background-color: var(--light-color);
 }
 .email-container {
@@ -86,25 +84,18 @@ button {
   flex-direction: column;
 }
 .font-awesome-icon {
-  color: #ffffff;
   font-size: 66px;
 }
 form {
   display: flex;
   flex-direction: column;
 }
-.linkedin-github-container {
-  display: flex;
-  flex-wrap: wrap;
 
-  gap: 20px;
-  justify-content: center;
-}
 h1 {
   text-align: center;
   margin: 0 0 40px 0;
 }
-h3 {
+h2 {
   margin: 10px 0 10px 0;
 }
 input,

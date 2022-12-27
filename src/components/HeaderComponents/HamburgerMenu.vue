@@ -1,18 +1,19 @@
 <template>
-  <button class="hamburger">
-    <span class="hamburger-box">
-      <span class="hamburger-inner"></span>
-    </span>
-  </button>
-  <div class="navigation">
-    <ul class="navigation_-list">
+  <div class="navigation" :class="{ 'navigation-show': !this.displayMenu }">
+    <ul class="navigation-list">
       <li
         class="menu-element"
         v-for="menuElement in menuElements"
         :key="menuElement.id"
-        @click="scroll(menuElement.id)"
       >
-        {{ menuElement.name }}
+        <button
+          @click="
+            scroll(menuElement.id);
+            $emit('menuToggle');
+          "
+        >
+          <h2>{{ menuElement.name }}</h2>
+        </button>
       </li>
     </ul>
   </div>
@@ -21,15 +22,47 @@
 <script>
 export default {
   name: "HamburgerMenu",
-  props: ["menuElements"],
+  props: ["menuElements", "displayMenu"],
+  data() {
+    return {};
+  },
   methods: {
     scroll(refName) {
       const element = document.getElementById(refName);
-      window.console.log(document.getElementById(refName));
       element.scrollIntoView({ behavior: "smooth" });
     },
   },
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+.navigation {
+  position: relative;
+  transform: translateY(-100%);
+  width: 100%;
+  background-color: var(--darker-color);
+}
+.navigation-show {
+  transform: translateY(0%);
+}
+.navigation-list {
+  padding: 0;
+  margin: 0;
+}
+li {
+  list-style: none;
+}
+li button {
+  border-style: none;
+  background-color: transparent;
+  padding: 20px;
+  width: 100%;
+}
+.navigation {
+  transition: transform 0.3s 0.1s ease-in-out;
+}
+
+h2 {
+  margin: 0%;
+}
+</style>

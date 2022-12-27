@@ -2,9 +2,14 @@
   <div class="container">
     <h1>My projects</h1>
     <div class="portfolio-projects">
-      <PortfolioProject :portfolioProject="portfolioProjects[0]" />
+      <PortfolioProject
+        v-for="portfolioProject in this.portfolioProjects"
+        :key="portfolioProject.name"
+        :portfolioProject="portfolioProject"
+      />
+      <!-- <PortfolioProject :portfolioProject="portfolioProjects[0]" />
       <PortfolioProject :portfolioProject="portfolioProjects[1]" />
-      <PortfolioProject :portfolioProject="portfolioProjects[2]" />
+      <PortfolioProject :portfolioProject="portfolioProjects[2]" /> -->
     </div>
   </div>
 </template>
@@ -22,16 +27,19 @@ export default {
       portfolioProjects: [
         {
           name: `Catch the fruit`,
+          link: "https://github.com/JELCZU/Catch-The-Fruit",
           img: `catch-the-fruit.png`,
           gif: `catch-the-fruit.gif`,
         },
         {
           name: `Crypto currency`,
+          link: "https://github.com/JELCZU/crypto-currency",
           img: `crypto-currency.png`,
           gif: `crypto-currency.gif`,
         },
         {
           name: `Bike shop`,
+          link: "https://github.com/JELCZU/Bike-shop",
           img: `bike-shop.png`,
           gif: `bike-shop.gif`,
         },

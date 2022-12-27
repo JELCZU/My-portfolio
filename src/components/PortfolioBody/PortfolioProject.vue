@@ -4,8 +4,10 @@
     @mouseover="currentImage = this.portfolioProject.gif"
     @mouseleave="currentImage = this.portfolioProject.img"
   >
-    <img :src="require(`@/assets/img/${currentImage}`)" />
-    <h3>{{ this.portfolioProject.name }}</h3>
+    <a :href="this.portfolioProject.link"
+      ><img :src="require(`@/assets/img/${currentImage}`)"
+    /></a>
+    <h2>{{ this.portfolioProject.name }}</h2>
   </div>
 </template>
 
@@ -22,15 +24,15 @@ export default {
 </script>
 
 <style scoped>
-h3 {
+h2 {
   margin: 10px;
 }
 
 .portfolio-project {
   align-items: center;
-  background-color: var(--dark-color);
+  background-color: var(--darker-color);
   color: #ffffff;
-  cursor: pointer;
+
   display: flex;
   flex-direction: column;
   padding-top: 40px;

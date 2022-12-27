@@ -40,8 +40,11 @@ body {
   margin: 0;
 }
 .container {
-  padding: 40px 20px;
+  /* padding: 50px 20px;
+  margin: -10px 0; */
+  padding: 50px 20px;
 }
+
 h1,
 h2,
 h3,
@@ -53,21 +56,23 @@ h1 {
   font-size: 32px;
 }
 h2 {
-  font-size: 26px;
-}
-h3 {
   font-size: 22px;
 }
+h3 {
+  font-size: 18px;
+}
 .navigation {
-  position: sticky;
+  position: fixed;
+  width: 100%;
   top: 0;
 }
-/* #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-} */
+.linkedin-github-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+.font-awesome-icon {
+  color: #ffffff;
+}
 </style>

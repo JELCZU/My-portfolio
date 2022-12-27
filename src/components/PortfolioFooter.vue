@@ -5,9 +5,6 @@
 <script>
 export default {
   name: "PortfolioFooter",
-  // props: {
-  //   msg: String,
-  // },
 };
 </script>
 
