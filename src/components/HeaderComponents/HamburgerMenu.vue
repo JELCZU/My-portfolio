@@ -59,6 +59,9 @@ li button {
   padding: 20px;
   width: 100%;
 }
+li button :hover {
+  text-decoration: underline;
+}
 .navigation {
   transition: transform 0.3s 0.1s ease-in-out;
 }

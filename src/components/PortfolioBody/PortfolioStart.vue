@@ -59,9 +59,6 @@ export default {
   width: fit-content;
 }
 
-#to-my-projects-btn :hover > {
-  color: red;
-}
 .container {
   height: 100%;
   display: flex;

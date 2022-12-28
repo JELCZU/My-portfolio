@@ -1,9 +1,10 @@
 <template>
   <div>
     <div class="header">
-      <a class="logo" href=""
-        ><img src="@/assets/img/logo.png" alt="Kamil Jarczak logo"
-      /></a>
+      <button class="logo" @click="scroll('start')">
+        <img src="@/assets/img/logo.png" alt="Kamil Jarczak logo" />
+      </button>
+
       <button class="hamburger" @click="menuToggle()">
         <font-awesome-icon
           v-if="this.displayMenu"
@@ -41,17 +42,36 @@ export default {
         { name: "Contact", id: "contact" },
       ],
       displayMenu: true,
+      isMobile: true,
     };
   },
   methods: {
     menuToggle() {
       this.displayMenu = !this.displayMenu;
     },
+    scroll(refName) {
+      const element = document.getElementById(refName);
+      element.scrollIntoView({ behavior: "smooth" });
+    },
+  },
+  mounted() {
+    if (navigator.maxTouchPoints > 0 && navigator.maxTouchPoints !== 256) {
+      this.isMobile = true;
+    } else {
+      this.isMobile = false;
+    }
+    window.console.log(`${this.isMobile}  ${navigator.maxTouchPoints}`);
   },
 };
 </script>
 
 <style>
+button {
+  background-color: transparent;
+  border-style: none;
+  padding: 0;
+  margin: 0;
+}
 .font-awesome-icon {
   color: #ffffff;
 }
