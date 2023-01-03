@@ -1,6 +1,11 @@
 <template>
   <div id="start"><PortfolioStart /></div>
-  <div id="projects"><PortfolioProjects /></div>
+  <div id="projects">
+    <PortfolioProjects
+      :portfolioProjects="portfolioProjects"
+      @display-project-details="displayProjectDetails"
+    />
+  </div>
   <div id="contact"><ContactMe /></div>
 </template>
 
@@ -15,6 +20,13 @@ export default {
     PortfolioStart,
     PortfolioProjects,
     ContactMe,
+  },
+  props: ["portfolioProjects"],
+  emits: ["displayProjectDetails"],
+  methods: {
+    displayProjectDetails(index) {
+      this.$emit("displayProjectDetails", index);
+    },
   },
 };
 </script>

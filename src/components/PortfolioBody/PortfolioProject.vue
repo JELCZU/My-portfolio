@@ -4,24 +4,25 @@
     @mouseover="currentImage = this.portfolioProject.gif"
     @mouseleave="currentImage = this.portfolioProject.img"
   >
-    <a :href="this.portfolioProject.link"
-      ><img loading="lazy" :src="require(`@/assets/img/${currentImage}`)"
-    /></a>
-    <a :href="this.portfolioProject.link">
-      <h2>{{ this.portfolioProject.name }}</h2></a
-    >
+    <button @click="$emit('displayProjectDetails', index)">
+      <img loading="lazy" :src="require(`@/assets/img/${currentImage}`)" />
+    </button>
+    <button @click="$emit('displayProjectDetails', index)">
+      <h2>{{ this.portfolioProject.name }}</h2>
+    </button>
   </div>
 </template>
-
 <script>
 export default {
   name: "PortfolioProjects",
-  props: ["portfolioProject"],
+  props: ["portfolioProject", "index"],
+  emits: ["displayProjectDetails"],
   data() {
     return {
       currentImage: this.portfolioProject.img,
     };
   },
+  methods: {},
 };
 </script>
 
@@ -45,5 +46,11 @@ h2 {
 }
 img {
   width: 100%;
+}
+button {
+  margin: 0;
+  padding: 0;
+  border-style: none;
+  border-width: 0;
 }
 </style>

@@ -1,16 +1,29 @@
 <template>
   <div>
     <div class="navigation"><PortfolioNavigation /></div>
-    <div class="content"><PortfolioBody /></div>
+    <div class="content">
+      <PortfolioBody
+        :portfolioProjects="portfolioProjects"
+        @display-project-details="displayProjectDetails"
+      />
+    </div>
     <div class="footer"><PortfolioFooter /></div>
+    <div v-if="projectDetails.display" class="project-details">
+      <PortfolioProjectDetails
+        :portfolioProject="
+          this.portfolioProjects[this.projectDetails.projectIndex]
+        "
+        @hideProjectDetails="hideProjectDetails"
+      />
+    </div>
   </div>
 </template>
 
 <script>
-// import HelloWorld from "./components/HelloWorld.vue";
 import PortfolioNavigation from "./components/PortfolioNavigation.vue";
 import PortfolioBody from "./components/PortfolioBody.vue";
 import PortfolioFooter from "./components/PortfolioFooter.vue";
+import PortfolioProjectDetails from "./components/PortfolioBody/PortfolioProjectDetails.vue";
 
 export default {
   name: "App",
@@ -18,6 +31,53 @@ export default {
     PortfolioNavigation,
     PortfolioBody,
     PortfolioFooter,
+    PortfolioProjectDetails,
+  },
+  data() {
+    return {
+      portfolioProjects: [
+        {
+          name: "Catch the fruit",
+          description:
+            "Catch the fruit is game developed using HTML+CSS+JavaScript. Goal of the game is to catch falling fruits.",
+          link: {
+            demo: "https://jelczu.github.io/Catch-The-Fruit/",
+            src: "https://github.com/JELCZU/Catch-The-Fruit",
+          },
+          img: "catch-the-fruit.png",
+          gif: "catch-the-fruit.gif",
+        },
+        {
+          name: "Crypto currency",
+          description:
+            "Crypto currency is app developed by using Vue framework. This app let you check your crypto wallet and track your crypto wallet balance changes. In this app you can also check price of crypto currency and buy or sell it.",
+          link: { demo: "", src: "https://github.com/JELCZU/crypto-currency" },
+          img: "crypto-currency.png",
+          gif: "crypto-currency.gif",
+        },
+        {
+          name: "Bike shop",
+          description:
+            "This app is frontend of bike shop and is developed using Angular framework. This bike shop let you scroll through various products and add them to your cart.",
+          link: { demo: "", src: "https://github.com/JELCZU/Bike-shop" },
+          img: "bike-shop.png",
+          gif: "bike-shop.gif",
+        },
+      ],
+      projectDetails: {
+        display: false,
+        projectIndex: 0,
+      },
+    };
+  },
+  methods: {
+    displayProjectDetails(index) {
+      this.projectDetails.projectIndex = index;
+      this.projectDetails.display = true;
+    },
+    hideProjectDetails() {
+      this.projectDetails.display = false;
+    },
   },
 };
 </script>
@@ -25,7 +85,6 @@ export default {
 <style>
 * {
   box-sizing: border-box;
-  /* font-family: SF Pro Display, Helvetica, Arial, sans-serif; */
   font-family: Open Sans, sans-serif;
 }
 :root {
@@ -62,8 +121,8 @@ h2 {
 h3 {
   font-size: 18px;
 }
+.project-details,
 .navigation {
-  height: min-content;
   position: fixed;
   width: 100%;
   top: 0;

@@ -60,12 +60,14 @@ export default {
     } else {
       this.isMobile = false;
     }
-    window.console.log(`${this.isMobile}  ${navigator.maxTouchPoints}`);
   },
 };
 </script>
 
 <style>
+.bars {
+  font-size: 36px;
+}
 button {
   background-color: transparent;
   border-style: none;
@@ -74,12 +76,6 @@ button {
 }
 .font-awesome-icon {
   color: #ffffff;
-}
-.bars {
-  font-size: 36px;
-}
-.xmark {
-  font-size: 47px;
 }
 .hamburger {
   padding: 0px;
@@ -100,9 +96,11 @@ button {
   width: 100%;
   z-index: 10;
 }
-
 .logo,
 img {
   height: 100%;
+}
+.xmark {
+  font-size: 47px;
 }
 </style>
