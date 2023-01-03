@@ -66,6 +66,7 @@ h2 {
 }
 h3 {
   text-align: justify;
+  margin: 20px 10px;
 }
 
 .close-btn-container {
