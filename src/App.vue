@@ -51,9 +51,23 @@ export default {
           name: "Crypto currency",
           description:
             "Crypto currency is app developed by using Vue framework. This app let you check your crypto wallet and track your crypto wallet balance changes. In this app you can also check price of crypto currency and buy or sell it.",
-          link: { demo: "", src: "https://github.com/JELCZU/crypto-currency" },
+          link: {
+            demo: "https://jelczu.github.io/crypto-currency/",
+            src: "https://github.com/JELCZU/crypto-currency",
+          },
           img: "crypto-currency.png",
           gif: "crypto-currency.gif",
+        },
+        {
+          name: "Eaten calories",
+          description:
+            "Eaten calories is app to sum up calories and nutirions from your meals. It might helps you with control how mutch you eat thereby stay healty.",
+          link: {
+            demo: "https://jelczu.github.io/Eaten-calories/",
+            src: "https://github.com/JELCZU/Eaten-calories",
+          },
+          img: "eaten-calories.png",
+          gif: "eaten-calories.gif",
         },
         {
           name: "Bike shop",
