@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <div>
-      <h1>Hi,<br />it's Kamil Jarczak</h1>
+      <h1>Hi,<br />I'm Kamil Jarczak</h1>
 
       <h2>
         I'm a web developer.<br />Contact me and let's make some great work

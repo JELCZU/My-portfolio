@@ -37,6 +37,16 @@ export default {
     return {
       portfolioProjects: [
         {
+          name: "Keep diet",
+          description: "Create your diet plan that fits best your needs.",
+          link: {
+            demo: "",
+            src: "",
+          },
+          img: "keep-diet.png",
+          gif: "keep-diet.gif",
+        },
+        {
           name: "Catch the fruit",
           description:
             "Catch the fruit is game developed using HTML+CSS+JavaScript. Goal of the game is to catch falling fruits.",
@@ -116,7 +126,8 @@ button {
   cursor: pointer;
 }
 .container {
-  padding: 50px 20px;
+  padding: 60px 20px;
+  padding-bottom: 40px;
 }
 
 h1,

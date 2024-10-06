@@ -2,7 +2,8 @@
   <div>
     <div class="header">
       <button class="logo" @click="scroll('start')">
-        <img src="@/assets/img/logo.png" alt="Kamil Jarczak logo" />
+        <!-- <img src="@/assets/img/logo.png" alt="Kamil Jarczak logo" /> -->
+        <h1>Kamil Jarczak</h1>
       </button>
 
       <button class="hamburger" @click="menuToggle()">
@@ -65,6 +66,9 @@ export default {
 </script>
 
 <style>
+h1 {
+  margin: 0;
+}
 .bars {
   font-size: 36px;
 }
@@ -89,7 +93,7 @@ button {
   align-items: center;
   background-color: var(--dark-color);
   display: flex;
-  height: 50px;
+  height: 60px;
   justify-content: space-between;
   padding: 5px 20px;
   position: relative;

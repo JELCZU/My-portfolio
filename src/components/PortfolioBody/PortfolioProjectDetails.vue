@@ -24,7 +24,9 @@
             :href="this.portfolioProject.link.demo"
             ><h3>Demo</h3></a
           >
-          <a :href="this.portfolioProject.link.src" .disabled="true"
+          <a
+            v-bind:class="{ disabled: !this.portfolioProject.link.src }"
+            :href="this.portfolioProject.link.src"
             ><h3>Code</h3></a
           >
         </div>
